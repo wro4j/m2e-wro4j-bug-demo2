@@ -11,16 +11,16 @@ import ro.isdc.wro.model.resource.processor.impl.css.LessCssImportPreProcessor;
 public class LessWroManagerFactory extends
         DefaultStandaloneContextAwareManagerFactory {
 
-	public LessWroManagerFactory() {
-		setNamingStrategy(new CacheHashEncoderNamingStrategy());
-	}
+    public LessWroManagerFactory() {
+        setNamingStrategy(new CacheHashEncoderNamingStrategy());
+    }
 
-	@Override
-	protected ProcessorsFactory newProcessorsFactory() {
-		SimpleProcessorsFactory result = new SimpleProcessorsFactory();
-		result.addPreProcessor(new LessCssImportPreProcessor());
-		result.addPreProcessor(new LessCssProcessor());
-		result.addPreProcessor(new YUICssCompressorProcessor());
-		return result;
-	}
+    @Override
+    protected ProcessorsFactory newProcessorsFactory() {
+        final SimpleProcessorsFactory result = new SimpleProcessorsFactory();
+        result.addPreProcessor(new LessCssImportPreProcessor());
+        result.addPreProcessor(new LessCssProcessor());
+        result.addPreProcessor(new YUICssCompressorProcessor());
+        return result;
+    }
 }
