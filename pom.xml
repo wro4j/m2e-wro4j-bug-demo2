@@ -68,7 +68,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <wroManagerFactory>de.evosec.wro4j.LessWroManagerFactory</wroManagerFactory>
+                    <wroManagerFactory>ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory>
                     <contextFolder>${basedir}/src/main/less</contextFolder>
                     <groupNameMappingFile>${project.build.directory}/naming.properties</groupNameMappingFile>
                     <destinationFolder>${project.build.directory}/${project.build.finalName}/css</destinationFolder>
