@@ -1,7 +1,7 @@
 package de.evosec.wro4j;
 
 
-import ro.isdc.wro.extensions.processor.css.LessCssProcessor;
+import ro.isdc.wro.extensions.processor.css.Less4jProcessor;
 import ro.isdc.wro.extensions.processor.css.YUICssCompressorProcessor;
 import ro.isdc.wro.manager.factory.standalone.DefaultStandaloneContextAwareManagerFactory;
 import ro.isdc.wro.model.resource.processor.factory.ProcessorsFactory;
@@ -19,7 +19,8 @@ public class LessWroManagerFactory extends
     protected ProcessorsFactory newProcessorsFactory() {
         final SimpleProcessorsFactory result = new SimpleProcessorsFactory();
         result.addPreProcessor(new LessCssImportPreProcessor());
-        result.addPreProcessor(new LessCssProcessor());
+        //result.addPreProcessor(new LessCssProcessor());
+        result.addPreProcessor(new Less4jProcessor());
         result.addPreProcessor(new YUICssCompressorProcessor());
         return result;
     }

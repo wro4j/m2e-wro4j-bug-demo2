@@ -73,6 +73,7 @@
                     <groupNameMappingFile>${project.build.directory}/naming.properties</groupNameMappingFile>
                     <destinationFolder>${project.build.directory}/${project.build.finalName}/css</destinationFolder>
                     <minimize>true</minimize>
+                    <incrementalBuildEnabled>true</incrementalBuildEnabled>
                 </configuration>
             </plugin>
         </plugins>
